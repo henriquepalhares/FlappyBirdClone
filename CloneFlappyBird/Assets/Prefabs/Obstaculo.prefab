@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 5
+  eu: {fileID: 6019343517693277240}
 --- !u!1 &6019343518219353502
 GameObject:
   m_ObjectHideFlags: 0
