@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
         Subir();
         Limitando();
     }
+
     //metodo subir
     public void Subir()
     {
@@ -28,12 +30,19 @@ public class PlayerController : MonoBehaviour
             meuRb.velocity = Vector2.up * velocidade;
         }
     }
+    //metodo para limitar velocidade de queda
     public void Limitando() {
-        //limitando queda
+
         if (meuRb.velocity.y < -velocidade)
         {
             meuRb.velocity = Vector2.down * velocidade;
         }
+    }
+    //configurando a colisao do player
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        SceneManager.LoadScene("Jogo");
     }
 }
 
