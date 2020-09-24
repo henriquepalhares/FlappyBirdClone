@@ -191,7 +191,7 @@ PrefabInstance:
     - target: {fileID: 2730257691465713953, guid: d911ff8de09a7994c9a953e0b958caa7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2730257691465713965, guid: d911ff8de09a7994c9a953e0b958caa7,
         type: 3}
@@ -685,6 +685,11 @@ PrefabInstance:
       propertyPath: levelUP
       value: 
       objectReference: {fileID: 8300000, guid: f9313d8550f638e478dca7b60cd16232, type: 3}
+    - target: {fileID: 6897658596464510181, guid: 0317c186b9ea53e44b0837c0a0637549,
+        type: 3}
+      propertyPath: proximoLevel
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 9027919321221146973, guid: 0317c186b9ea53e44b0837c0a0637549,
         type: 3}
       propertyPath: m_LocalPosition.x
