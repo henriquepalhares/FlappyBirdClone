@@ -43,3 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741310117da422c4d8f1be7f0c13c129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 1
+  obstaculo: {fileID: 6019343517693277240, guid: 8d5162721a4449b479cd17a4001f95be,
+    type: 3}
+  posicao: {x: 12, y: 0, z: 0}
+  posMin: -0.4
+  posMax: 2.3
+  timerMin: 0.6
+  timerMax: 2
+  pontosTexto: {fileID: 0}
+  levelTexto: {fileID: 0}
+  proximoLevel: 10

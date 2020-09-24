@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    //pegando as montanhas 
+
+
     //variavel dos pontos
     private float pontos = 0;
     [SerializeField] private float timer = 1f;
     [SerializeField] private GameObject obstaculo;
+    
     //posicao obstaculo
     [SerializeField] private Vector3 posicao;
     //posicao minima e maxima
@@ -16,11 +20,17 @@ public class GameController : MonoBehaviour
     [SerializeField] private float posMax = 2.3f;
 
     //timer max e min
-    [SerializeField] private float timerMin = 0.4f;
+    [SerializeField] private float timerMin = 1;
     [SerializeField] private float timerMax = 3f;
 
-    //variavel pontos canvas
+    //variavel pontos canvas 
     [SerializeField] private Text pontosTexto;
+    //variavel level canvas
+    [SerializeField] private Text levelTexto;
+
+    //level do player
+    private int level = 1;
+    [SerializeField] private float proximoLevel = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +42,7 @@ public class GameController : MonoBehaviour
     {
         Pontos();
         CriaObstaculo();
+        GanhaLevel();
 
     }
 
@@ -47,8 +58,22 @@ public class GameController : MonoBehaviour
         if (timer <= 0)
         {
             posicao.y = Random.Range(posMin, posMax);
-            timer = Random.Range(timerMin, timerMax);
+            timer = Random.Range(timerMin / level, timerMax);
             Instantiate(obstaculo, posicao, Quaternion.identity);
         }
+    }
+    private void GanhaLevel() {
+        if (pontos > proximoLevel) {
+            //aumentando o level
+            level++;
+            proximoLevel *= 2;
+            
+        }
+        levelTexto.text = level.ToString();
+        //aumentando o valor do proximo level
+
+    }
+    public int retornaLevel() {
+        return level;
     }
 }

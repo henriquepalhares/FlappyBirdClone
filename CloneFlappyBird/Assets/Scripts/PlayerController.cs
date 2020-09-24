@@ -20,6 +20,15 @@ public class PlayerController : MonoBehaviour
     {
         Subir();
         Limitando();
+        LimiteY();
+    }
+
+    private void LimiteY()
+    {
+        if (transform.position.y >= 4.8f || transform.position.y <= -4.8)
+        {
+            SceneManager.LoadScene("Jogo");
+        }
     }
 
     //metodo subir
