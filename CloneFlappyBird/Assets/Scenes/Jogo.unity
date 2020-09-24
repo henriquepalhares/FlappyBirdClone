@@ -131,12 +131,12 @@ PrefabInstance:
     - target: {fileID: 2730257691465713952, guid: d911ff8de09a7994c9a953e0b958caa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.74
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 2730257691465713952, guid: d911ff8de09a7994c9a953e0b958caa7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 2730257691465713952, guid: d911ff8de09a7994c9a953e0b958caa7,
         type: 3}
@@ -188,6 +188,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2730257691465713953, guid: d911ff8de09a7994c9a953e0b958caa7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730257691465713965, guid: d911ff8de09a7994c9a953e0b958caa7,
+        type: 3}
+      propertyPath: puf
+      value: 
+      objectReference: {fileID: 1505318388191989642, guid: 5308803dfdf3c7f488c745fe3457c547,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d911ff8de09a7994c9a953e0b958caa7, type: 3}
 --- !u!114 &803778274 stripped
@@ -202,6 +213,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1277660151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7272226248734937968, guid: 899a47bb4101d66448bc0e2f9c27f1ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 7272226248933644833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1277660155
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277660151}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b8fd252ca4a41bc4aab8a555816ad8b4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.14
+  m_Pitch: 0.9
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 166
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1705081494 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2384499008419402759, guid: f0cd59b8f250c2647b68310d3b57677b,
@@ -562,6 +675,16 @@ PrefabInstance:
       propertyPath: levelTexto
       value: 
       objectReference: {fileID: 1705081494}
+    - target: {fileID: 6897658596464510181, guid: 0317c186b9ea53e44b0837c0a0637549,
+        type: 3}
+      propertyPath: timerMin
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897658596464510181, guid: 0317c186b9ea53e44b0837c0a0637549,
+        type: 3}
+      propertyPath: levelUP
+      value: 
+      objectReference: {fileID: 8300000, guid: f9313d8550f638e478dca7b60cd16232, type: 3}
     - target: {fileID: 9027919321221146973, guid: 0317c186b9ea53e44b0837c0a0637549,
         type: 3}
       propertyPath: m_LocalPosition.x

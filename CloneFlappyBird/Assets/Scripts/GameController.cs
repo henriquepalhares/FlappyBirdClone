@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    //pegando as montanhas 
+    //pegando camera
+    private Vector3 camPos;
+    //pegando os som
+    [SerializeField] private AudioClip levelUP;
 
 
     //variavel dos pontos
@@ -34,7 +37,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        camPos = Camera.main.transform.position;
     }
 
     // Update is called once per frame
@@ -67,6 +70,10 @@ public class GameController : MonoBehaviour
             //aumentando o level
             level++;
             proximoLevel *= 2;
+            if (level != 1)
+            {
+                AudioSource.PlayClipAtPoint(levelUP, camPos);
+            }
             
         }
         levelTexto.text = level.ToString();

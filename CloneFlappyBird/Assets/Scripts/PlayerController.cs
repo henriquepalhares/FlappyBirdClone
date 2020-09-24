@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+
+    //puf
+    //distancia puf em relaçao ao player
+    private float distPuf = 0.5f;
+    private Vector3 vectorPuf;
+    [SerializeField] private GameObject puf;
     //criando as variaveis
     [SerializeField] private float velocidade = 5f;
     private Rigidbody2D meuRb;
@@ -18,6 +24,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        vectorPuf.x = transform.position.x - distPuf;
+        vectorPuf.y = transform.position.y - distPuf;
         Subir();
         Limitando();
         LimiteY();
@@ -36,7 +44,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+
             meuRb.velocity = Vector2.up * velocidade;
+            //salvando puf em uma variavel
+            GameObject meuPuf = Instantiate(puf, vectorPuf, Quaternion.identity);
+            Destroy(meuPuf, 2f);
         }
     }
     //metodo para limitar velocidade de queda
